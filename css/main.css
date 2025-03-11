@@ -58,6 +58,7 @@ img {
 .photo-item:hover {
     box-shadow: 8px 8px 0 rgb(128, 128, 128);
     transform: rotate(1.85deg);
+    cursor: pointer;
 }
 
 .lightbox {
