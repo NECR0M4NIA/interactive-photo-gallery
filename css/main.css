@@ -1,0 +1,148 @@
+img {
+    width: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.main-wrapper {
+    position: relative;
+}
+
+.gallery-header {
+    text-align: center;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    margin-bottom: 3rem;
+}
+
+.search-input {
+    border-radius: 8px;
+    border: 2px solid #e5e5e5;
+    color: #999;
+    display: block;
+    margin: auto;
+    max-width: 460px;
+    outline: 0;
+    padding: .5rem 1rem;
+    width: 100%;
+}
+
+.photo-gallery {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    list-style-type: none;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    width: 90%;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.photo-item {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 250ms ease-out;
+}
+
+.photo-item:hover {
+    box-shadow: 8px 8px 0 rgb(128, 128, 128);
+    transform: rotate(1.85deg);
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.lightbox-content {
+    max-width: 768px;
+    color: #FFF;
+
+    img {
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+.modal-container img {
+    max-width: 40%;
+    max-height: 50vh;
+    object-fit: fill;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+    position: absolute;
+    top: 128px;
+    right: 345px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.close-btn img {
+    width: 30px;
+    max-width: 100%;
+    filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.3));
+    border-radius: 100%;
+}
+
+.left-arrow,
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.left-arrow {
+    left: 345px;
+}
+
+.right-arrow {
+    right: 345px;
+}
+
+.left-arrow img,
+.right-arrow img {
+    width: 30px;
+    max-width: 100%;
+    filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.3));
+    border-radius: 100%;
+}
